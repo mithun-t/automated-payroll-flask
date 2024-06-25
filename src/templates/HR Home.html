@@ -1,0 +1,86 @@
+
+
+
+{% extends 'index.html '%}
+{% block body %}
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <!--<h2 class="active"> Sign In </h2>-->
+    <!--<h2 class="inactive underlineHover">Sign Up </h2>-->
+
+    <!-- Icon -->
+
+
+    <!-- Login Form -->
+    <center>
+        <h2>HR HOME</h2>
+<table width="200" border="0" cellpadding="4" cellspacing="4">
+    <tr>
+      <td><a href="/addemployee" style="color:blue">Add Employee</a></td>
+    </tr>
+    <tr>
+      <td><a href="/editemployee" style="color:blue">Edit Employee</a></td>
+    </tr>
+    <tr>
+      <td><a href="/assignwork" style="color:blue">Assign Work</a></td>
+    </tr>
+    <tr>
+      <!--<td><a href="/track" style="color:blue">Track Employee</a></td>-->
+    </tr>
+    <tr>
+      <td><a href="/salery" style="color:blue">Check Salary</a></td>
+    </tr>
+  </table>
+</center>
+
+    <!-- Remind Passowrd -->
+    <!--<div id="formFooter">-->
+      <!--<a class="underlineHover" href="#">Forgot Password?</a>-->
+    <!--</div>-->
+
+  </div>
+</div>
+</body>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <td><a href="/addemployee">Add Employee</a></td>
+    </tr>
+    <tr>
+      <td><a href="/editemployee">Edit Employee</a></td>
+    </tr>
+    <tr>
+      <td><a href="/assignwork">Assign Work</a></td>
+    </tr>
+    <tr>
+      <td><a href="/trackemployee">Track Employee</a></td>
+    </tr>
+    <tr>
+      <td><a href="/checksalary">Check Salary</a></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

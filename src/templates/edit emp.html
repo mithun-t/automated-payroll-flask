@@ -1,0 +1,84 @@
+{% extends 'index.html '%}
+{% block body %}
+
+
+<body>
+<form action="/updateemployee" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="642" border="1">
+    <tr>
+      <td width="173">FIRST NAME </td>
+      <td><label>
+        <input type="text" name="fname" value="{{val[1]}}" pattern="[A-Z a-z]{3,35}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>LAST NAME </td>
+      <td><label>
+        <input type="text" name="lname" value="{{val[2]}}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>GENDER</td>
+      <td><label>
+        <input name="gender" type="radio" value="male" {% if val[3]=="male" %}checked{%endif%} />
+        MALE
+        <input name="gender" type="radio" value="female" {% if val[3]=="female" %}checked{%endif%}/>
+        FEMALE
+        <input name="gender" type="radio" value="others"{% if val[3]=="others" %}checked{%endif%} />
+        OTHERS</label></td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td><label>
+        <input type="text" name="phone" value="4" pattern="[6789][0-9]{9}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PLACE</td>
+      <td><label>
+        <input type="text" name="place" value="{{val[5]}}" pattern="[A-Z a-z]{3,35}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td><label>
+        <input type="text" name="post" value="{{val[6]}}" pattern="[A-Z a-z]{3,35}"required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN</td>
+      <td><label>
+        <input type="text" name="pin" value="{{val[7]}}" pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PHOTO</td>
+      <td><label>
+        <input type="file" name="file" value="{{[]}}" required/>
+      </label></td>
+    </tr>
+    <!--&ndash;&gt; &lt;!&ndash;<tr>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>Username</td>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td><label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="username" />&ndash;&gt;-->
+      <!--&lt;!&ndash;</label></td>&ndash;&gt;-->
+    <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+     <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>Password</td>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td><label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="password" />&ndash;&gt;-->
+      <!--&lt;!&ndash;</label></td>&ndash;&gt;-->
+    <!--&lt;!&ndash;</tr>-->
+  </table>
+  <label>
+  <blockquote>
+    <blockquote>
+      <p align="">
+        <input name="Submit" type="submit" value="Update" />
+      </p>
+    </blockquote>
+  </blockquote>
+  </label>
+</form>
+</body>
+{%endblock%}

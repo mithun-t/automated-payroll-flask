@@ -1,0 +1,27 @@
+{% extends 'index.html '%}
+{% block body %}
+
+<body>
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div align="center">
+    <table width="400" border="1" cellspacing="4" cellpadding="4">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Phone</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+      {% for i in val%}
+      <tr>
+        <td>{{i[1]}}</td>
+        <td><img src="static/phtos/{{i[8]}}">{{i[8]}}</td>
+        <td>{{i[4]}}</td>
+        <td> <label><a href="/track">Track</a></label></td>
+
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+</form>
+</body>
+{%endblock%}

@@ -1,0 +1,46 @@
+{% extends 'index.html '%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addworks">
+  <table width="200" border="1">
+    <tr>
+      <td>employee</td>
+      <td><label>
+        <select name="name" required>
+          {% for i in val %}
+          <option value="{{i[9]}}">
+            {{i[1]}} {{i[2]}}
+          </option>
+          {%endfor%}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><label>
+      <select name="location" required>
+          <option>Place</option>
+         <option>Kozhikode</option>
+         <option>Balussary</option>
+
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Work  Details</td>
+      <td><label>
+        <input type="text" name="workdetails" pattern="[A-Z a-z]{3,30}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <label>
+        <input type="submit" name="Submit" value="Submit" />
+        </label>
+      </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends 'index.html '%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="600" border="1" cellpadding="4" cellspacing="4" >
+    <tr>
+      <th width="128" scope="col">place</th>
+      <th width="128" scope="col">longitude</th>
+      <th width="101" scope="col">latitude </th>
+      <th width="71" scope="col">Date and Time</th>
+    </tr>
+      {%for i in val%}
+    <tr>
+      <td>{{i[5]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+
+    </tr>
+      {%endfor%}
+  </table>
+</form>
+</body>
+{%endblock%}

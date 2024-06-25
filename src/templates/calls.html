@@ -1,0 +1,24 @@
+{%extends 'index.html'%}
+{%block body%}
+<body>
+<center>
+<form id="form1" name="form1" method="post" action="" >
+  <table width="600" border="1">
+    <tr>
+      <th width="128" scope="col">Phone no.</th>
+      <th width="101" scope="col"> Type </th>
+      <th width="71" scope="col">Date and time</th>
+    </tr>
+    {%for i in val%}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+    </tr>
+      {%endfor%}
+  </table>
+</form>
+  </center>
+
+</body>
+{%endblock%}

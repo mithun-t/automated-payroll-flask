@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<center>
+  <h1 > Update HR</h1>
+<form action="/updatehr" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="642" border="0">
+    <tr>
+      <td width="173">FIRST NAME </td>
+      <td><label>
+        <input type="text" name="fname" value="{{val[1]}}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>LAST NAME </td>
+      <td><label>
+        <input type="text" name="lname" value="{{val[2]}}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>GENDER</td>
+      <td><label>
+        <input  type="radio" name="gender" value="male" {% if val[3]=='male' %} checked {% endif %} />
+        MALE
+        <input  type="radio" name="gender"  value="female" {% if val[3]=='female' %} checked {% endif %}  />
+        FEMALE
+        <input  type="radio" name="gender" value="others"  {% if val[3]=='others' %} checked {% endif %} />
+        OTHERS</label></td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td><label>
+        <input type="text" name="phone" value="{{val[4]}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PLACE</td>
+
+
+    <td>  <input type="text" name="place" value="{{val[5]}}" />
+      </label></td>
+<tr>
+      <td>POST</td>
+      <td><label>
+        <input type="text" name="post" value="{{val[6]}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN</td>
+      <td><label>
+        <input type="text" name="pin" value="{{val[7]}}"/>
+      </label></td>
+    </tr>
+    <!--<tr>-->
+      <!--<td>PHOTO</td>-->
+      <!--<td><label>-->
+        <!--<input type="file" name="file" />-->
+      <!--</label></td>-->
+    <!--</tr>-->
+
+  </table>
+  <label>
+  <blockquote>
+    <blockquote>
+      <p align="">
+        <input name="Submit" type="submit" value="update" />
+      </p>
+    </blockquote>
+  </blockquote>
+  </label>
+</form>
+</body>
+</center>
+{% endblock %}

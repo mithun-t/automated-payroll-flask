@@ -1,0 +1,205 @@
+
+
+
+{% extends 'index.html '%}
+{% block body %}
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <!--<h2 class="active"> Sign In </h2>-->
+    <!--<h2 class="inactive underlineHover">Sign Up </h2>-->
+
+    <!-- Icon -->
+
+
+    <!-- Login Form -->
+    <center>
+      <h1 style="text-decoration: underline">ADD HR</h1>
+<form action="/hradd" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="100%" border="0">
+    <tr>
+      <td width="173">FIRST NAME </td>
+      <td><label>
+        <input type="text" name="fname" pattern="[A-Z a-z]{3,35}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>LAST NAME </td>
+      <td><label>
+        <input type="text" name="lname" pattern="[A-Z a-z]{1,35}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>GENDER</td>
+      <td><label>
+        <input name="gender" type="radio" value="male" cheaked/>
+        MALE
+        <input name="gender" type="radio" value="female" />
+        FEMALE
+        <input name="gender" type="radio" value="others" />
+        OTHERS</label></td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td><label>
+        <input type="text" name="phone" pattern="[6789][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PLACE</td>
+      <td><label>
+        <input type="text" name="place" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td><label>
+        <input type="text" name="post" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN</td>
+      <td><label>
+        <input type="text" name="pin" pattern="[0-9]{6}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PHOTO</td>
+      <td><label>
+        <input type="file" name="file" />
+      </label></td>
+    </tr>
+     <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="username" />
+      </label></td>
+    </tr>
+     <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="text" name="password" />
+      </label></td>
+    </tr>
+  </table>
+  <label>
+  <blockquote>
+    <blockquote>
+      <p align="">
+        <input name="Submit" type="submit" value="Register" />
+      </p>
+    </blockquote>
+  </blockquote>
+  </label>
+</form>
+</center>
+
+    <!-- Remind Passowrd -->
+    <!--<div id="formFooter">-->
+      <!--<a class="underlineHover" href="#">Forgot Password?</a>-->
+    <!--</div>-->
+
+  </div>
+</div>
+</body>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<form action="/hradd" method="post" enctype="multipart/form-data" name="form1" id="form1">-->
+  <!--<table width="642" border="1">-->
+    <!--<tr>-->
+      <!--<td width="173">FIRST NAME </td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="fname" pattern="[A-Z a-z]{3,35}"/>-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>LAST NAME </td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="lname" pattern="[A-Z a-z]{1,35}"/>-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>GENDER</td>-->
+      <!--<td><label>-->
+        <!--<input name="gender" type="radio" value="male" cheaked/>-->
+        <!--MALE-->
+        <!--<input name="gender" type="radio" value="female" />-->
+        <!--FEMALE-->
+        <!--<input name="gender" type="radio" value="others" />-->
+        <!--OTHERS</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>PHONE</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="phone" pattern="[6789][0-9]{9}" />-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>PLACE</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="place" required/>-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>POST</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="post" required/>-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>PIN</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="pin" pattern="[0-9]{6}"/>-->
+      <!--</label></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>PHOTO</td>-->
+      <!--<td><label>-->
+        <!--<input type="file" name="file" />-->
+      <!--</label></td>-->
+    <!--</tr>-->
+     <!--<tr>-->
+      <!--<td>Username</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="username" />-->
+      <!--</label></td>-->
+    <!--</tr>-->
+     <!--<tr>-->
+      <!--<td>Password</td>-->
+      <!--<td><label>-->
+        <!--<input type="text" name="password" />-->
+      <!--</label></td>-->
+    <!--</tr>-->
+  <!--</table>-->
+  <!--<label>-->
+  <!--<blockquote>-->
+    <!--<blockquote>-->
+      <!--<p align="">-->
+        <!--<input name="Submit" type="submit" value="Register" />-->
+      <!--</p>-->
+    <!--</blockquote>-->
+  <!--</blockquote>-->
+  <!--</label>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

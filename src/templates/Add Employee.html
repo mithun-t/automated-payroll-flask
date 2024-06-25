@@ -1,0 +1,87 @@
+{% extends 'index.html'%}
+{% block body %}
+<body >
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+<center>
+  <h1>ADD EMPLOYEE</h1>
+<form action="/empadd" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="450" border="0">
+    <tr>
+      <td width="173">FIRST NAME </td>
+      <td><label>
+        <input type="text" name="fname" pattern="[A-Z a-z]{3,35}"  />
+      </label></td>
+    </tr>
+    <tr>
+      <td>LAST NAME </td>
+      <td><label>
+        <input type="text" name="lname"  pattern="[A-Z a-z]{1,35}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>GENDER</td>
+      <td><label>
+        <input name="gender" type="radio" value="male" checked />
+        MALE
+        <input name="gender" type="radio" value="female" />
+        FEMALE
+        <input name="gender" type="radio" value="others" />
+        OTHERS</label></td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td><label>
+        <input type="text" name="phone" pattern="[6789][0-9]{9}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>PLACE</td>
+      <td><label>
+        <input type="text" name="place" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td><label>
+        <input type="text" name="post" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN</td>
+      <td><label>
+        <input type="text" name="pin" pattern="[0-9]{6}" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PHOTO</td>
+      <td><label>
+        <input type="file" name="file" required />
+      </label></td>
+    </tr>
+     <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="username" required />
+      </label></td>
+    </tr>
+     <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="text" name="password" required/>
+      </label></td>
+    </tr>
+  </table>
+  <label>
+  <blockquote>
+    <blockquote>
+      <p align="">
+        <input name="Submit" type="submit" value="Register" />
+      </p>
+    </blockquote>
+  </blockquote>
+  </label>
+</form>
+  </center>
+</body>
+{%endblock%}
